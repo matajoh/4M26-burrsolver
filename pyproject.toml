@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name =  "burrsolver"
+version = "1.0.0"
+authors = [
+    { name="Matthew Johnson", email="mj293@cam.ac.uk" },
+]
+description = "A program for solving burr puzzles"
+dependencies = [
+    "numpy",
+    "scenepic"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
+lecture = [
+    "matplotlib",
+    "pillow"
+]
+
+[project.scripts]
+burrsolver = "burrsolver:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]

@@ -1,0 +1,94 @@
+\documentclass{article}
+
+\usepackage{amsmath,graphicx}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\begin{document}
+
+\begin{algorithmic}
+    \Function{FindAssemblies}{$\Sigma$}
+        \State $O \gets \emptyset$
+
+        \For{$s \in \{1, 2, 3, 4, 5, 6\}$}
+            \State $X_s \gets$ \Call{PiecesAt}{$\Sigma$, $s$, $\texttt{A}$}
+            \State $O \gets O \cup X_s$
+        \EndFor
+
+        \While{$O \neq \emptyset$}
+            \State $(A_x, S_x, P_x) \gets \argmin_{|S_x|} O$
+            \State $O \gets O - \{(A_x, S_x, P_x)\}$
+            \If{$S_x = \emptyset$}
+                \State $M \gets$ \Call{Disassemble}{$\Sigma$, $A_x$}
+                \If{$M \neq \emptyset$}
+                    \State \Return $A_x$, $M$
+                \EndIf
+            \EndIf
+
+            \State \Call {TryPieces}{$\Sigma$, $(A_x, S_x, P_x)$, $O$}
+        \EndWhile
+
+        \State \Return failure
+    \EndFunction
+\end{algorithmic}
+
+\newpage
+
+\begin{algorithmic}
+    \Function{TryPieces}{$\Sigma$, $(A, S, P)$, $O$}
+        \State $V \gets$ \Call{VoxelsFor}{$\Sigma$, $A$}
+        \For{$s \in S$}
+            \For{$p \in P$}
+                \State $X$ $\gets$ \Call{PiecesAt}{$\Sigma$, $s$, $p$}
+                \For{$x \in X$}
+                    \State $V_x \gets$ \Call{VoxelsFor}{$\Sigma$, $x$}
+                    \If{$V \cap V_x = \emptyset$}
+                        \State $A_x \gets A \cup \{x\}$
+                        \State $S_x \gets S - \{s\}$
+                        \State $P_x \gets P - \{p\}$
+                        \State $O \gets O \cup (A_x, S_x, P_x)$
+                    \EndIf
+                \EndFor
+            \EndFor
+        \EndFor
+
+        \State \Return $O$
+    \EndFunction
+\end{algorithmic}
+
+\newpage
+
+\begin{algorithmic}
+    \Function{ValidMoves}{$\Sigma$, $P$}        
+        \If{$|P| = 6$}
+            \State sizes $\gets [1, 2, 3]$
+        \ElsIf{$|P| \geq 4$}
+            \State sizes $\gets [1, 2]$
+        \Else
+            \State sizes $\gets [1]$
+        \EndIf
+
+        \State $M \gets \emptyset$
+        \State $V \gets$ \Call{VoxelsFor}{$\Sigma$, $P$}
+        \For{size $\in$ sizes}
+            \State $X \gets$ \Call{Combinations}{$P$, size}
+            \For{$X_i \in X$}
+                \State $V_i \gets$ \Call{VoxelsFor}{$\Sigma$, $X_i$}
+                \State $V_o \gets V - V_i$
+
+                \For{$d \in D$}
+                    \State $V_d \gets \{$\Call{Move}{$v$, $d$} $\mid v \in V_i\}$
+                    \If{$V_d \cap V_o = \emptyset$}
+                        \State $M \gets M \cup (X_i, d)$
+                    \EndIf
+                \EndFor
+            \EndFor
+        \EndFor
+
+        \State \Return $M$        
+    \EndFunction
+\end{algorithmic}
+
+\end{document}
