@@ -1,0 +1,215 @@
+{
+    "colors": [
+        "#ff0000",
+        "#00ff00",
+        "#0000ff",
+        "#ffff00",
+        "#ff00ff",
+        "#00ffff"
+    ],
+    "order": [
+        "00",
+        "10",
+        "01",
+        "11"
+    ],
+    "puzzles": [
+        {
+            "shapes": [
+                "xxxxxx/xx..xx/x....x/x....x",
+                "xxxxxx/xxxxxx/x.x..x/x.x..x",
+                "xxxxxx/xxxxxx/xxxxxx/xxxxxx",
+                "xxxxxx/xxx.xx/x....x/x....x",
+                "xxxxxx/xx..xx/x..xxx/x...xx",
+                "xxxxxx/xx..xx/xxx..x/x....x"
+            ],
+            "assemblies": {
+                "A1a B2f E3a C4h F5g D6h": [
+                    "UP 6 [E3a]",
+                    "RIGHT 4 [A1a]",
+                    "FORWARD 4 [C4h D6h]",
+                    "UP 3 [F5g]",
+                    "FORWARD 5 [B2f]"
+                ]
+            }
+        },
+        {
+            "shapes": [
+                "xxxxxx/xx.xxx/x.x..x/x....x",
+                "xxxxxx/xxx.xx/x..x.x/x....x",
+                "xxxxxx/xx..xx/x..x.x/x....x",
+                "xxxxxx/xxx.xx/x..x.x/x....x",
+                "xxxxxx/xx.xxx/x....x/x....x",
+                "xxxxxx/xx.xxx/x.xx.x/x..x.x"
+            ],
+            "assemblies": {
+                "A1a C2d D3h B4b F5g E6b": [
+                    "BACKWARD 1 [F5g]",
+                    "UP 1 [B4b]",
+                    "FORWARD 1 [A1a D3h]",
+                    "RIGHT 1 [(0,0,4,X)3h]",
+                    "UP 4 [(2,0,4,X)3h]",
+                    "BACKWARD 1 [(0,-2,2,Z)1a]",
+                    "DOWN 1 [(0,2,-2,X)4b]",
+                    "BACKWARD 1 [A1a B4b]",
+                    "RIGHT 4 [(0,2,-2,Z)5g E6b]",
+                    "UP 4 [(0,0,-4,X)4b]",
+                    "FORWARD 4 [C2d]",
+                    "FORWARD 7 [(0,-2,-2,Z)1a]"
+                ]
+            }
+        },
+        {
+            "shapes": [
+                "xxxxxx/xxxxxx/x.x..x/x.x..x",
+                "xxxxxx/xxx.xx/x....x/x....x",
+                "xxxxxx/xxx..x/xx..xx/xx...x",
+                "xxxxxx/xx..xx/xxx..x/x....x",
+                "xxxxxx/x....x/xx..xx/x....x",
+                "xxxxxx/xxxxxx/xxxxxx/xxxxxx"
+            ],
+            "assemblies": {
+                "A1a D2h C3g F4c E5c B6a": [
+                    "LEFT 6 [B6a]",
+                    "BACKWARD 4 [E5c]",
+                    "UP 4 [D2h F4c]",
+                    "FORWARD 4 [C3g]",
+                    "FORWARD 6 [A1a]"
+                ]
+            }
+        },
+        {
+            "shapes": [
+                "xxxxxx/xxxxxx/xx..xx/xxx..x",
+                "xxxxxx/xxx.xx/xx..xx/x.x..x",
+                "xxxxxx/xx..xx/x....x/xx...x",
+                "xxx.xx/xxxxxx/x.x..x/x....x",
+                "xx..xx/xxxxxx/x....x/x.x..x",
+                "xx.xxx/xxxxxx/x....x/x....x"
+            ],
+            "assemblies": {
+                "A3a B1b E2c D4h C5h F6c": [
+                    "RIGHT 1 [B1b]",
+                    "UP 1 [E2c]",
+                    "RIGHT 1 [(2,0,-2,X)1b F6c]",
+                    "DOWN 1 [A3a C5h D4h]",
+                    "BACKWARD 1 [(2,2,0,Y)2c (2,2,0,Z)6c (4,0,-2,X)1b]",
+                    "DOWN 5 [(-2,-2,0,Y)5h (0,-2,2,X)4h (0,-4,0,Z)3a]",
+                    "LEFT 5 [(2,2,-2,Z)6c]",
+                    "FORWARD 5 [(2,2,-2,Y)2c]",
+                    "FORWARD 6 [(4,0,-4,X)1b]"
+                ]
+            }
+        },
+        {
+            "shapes": [
+                "xxxxxx/xx..xx/x.xxxx/x...xx",
+                "xxxxxx/x..xxx/xx..xx/x...xx",
+                "xxxxxx/x.x..x/xx..xx/x....x",
+                "xxxxxx/x..x.x/xx..xx/x....x",
+                "xxxxxx/x..xxx/xxxxxx/x..xxx",
+                "xxxxxx/xx..xx/xx.xxx/xx..xx"
+            ],
+            "assemblies": {
+                "A1a E2e B3c C4a F5f D6h": [
+                    "BACKWARD 6 [B3c C4a F5f]",
+                    "RIGHT 3 [E2e]",
+                    "UP 4 [D6h]",
+                    "FORWARD 6 [A1a]"
+                ]
+            }
+        },
+        {
+            "shapes": [
+                "xxxxxx/x....x/xx.xxx/xx...x",
+                "xxxxxx/x....x/xx..xx/x....x",
+                "xxxxxx/xxxxxx/xx..xx/xx..xx",
+                "xxxxxx/x.x..x/xx..xx/x....x",
+                "xxxxxx/x..x.x/xx..xx/x....x",
+                "xxxxxx/x...xx/xx..xx/xxx..x"
+            ],
+            "assemblies": {
+                "A1b F2f B3b E4c D5g C6g": [
+                    "LEFT 1 [B3b]",
+                    "DOWN 1 [C6g]",
+                    "BACKWARD 1 [A1b]",
+                    "DOWN 1 [(-2,-2,0,Y)6g]",
+                    "LEFT 4 [F2f]",
+                    "FORWARD 3 [D5g]",
+                    "LEFT 5 [(-2,-4,0,Y)6g (-2,0,-2,X)3b]",
+                    "RIGHT 3 [E4c]",
+                    "FORWARD 7 [(0,-2,-2,Z)1b]"
+                ]
+            }
+        },
+        {
+            "shapes": [
+                "xxxxxx/x....x/xxx.xx/x....x",
+                "xxxxxx/x...xx/xxxxxx/x...xx",
+                "xxxxxx/x....x/xxxxxx/x....x",
+                "xxxxxx/xx..xx/xx..xx/x....x",
+                "xxxxxx/x.x..x/xx..xx/x....x",
+                "xxxxxx/x.xx.x/xxxxxx/x....x"
+            ],
+            "assemblies": {
+                "A1b D2a E3c C4a F5f B6e": [
+                    "RIGHT 1 [D2a]",
+                    "RIGHT 1 [(2,0,2,X)2a]",
+                    "DOWN 1 [C4a]",
+                    "LEFT 1 [A1b]",
+                    "UP 1 [E3c F5f]",
+                    "BACKWARD 1 [(0,4,0,Z)5f]",
+                    "LEFT 4 [(0,4,-2,Z)5f]",
+                    "DOWN 1 [(2,2,0,Y)3c]",
+                    "RIGHT 1 [(-2,-2,0,Z)1b]",
+                    "DOWN 1 [A1b E3c]",
+                    "BACKWARD 4 [(2,-2,0,Y)3c B6e]",
+                    "LEFT 3 [(-2,-2,0,Y)4a]",
+                    "FORWARD 3 [(4,0,2,X)2a]",
+                    "FORWARD 6 [(0,-4,0,Z)1b]"
+                ]
+            }
+        },
+        {
+            "shapes": [
+                "xxxxxx/xxxxxx/xxx..x/xx..xx",
+                "xxxxxx/xx.xxx/xx..xx/x..x.x",
+                "xxxxxx/xx..xx/x....x/x...xx",
+                "xx.xxx/xxxxxx/x..x.x/x....x",
+                "xx..xx/xxxxxx/x....x/x..x.x",
+                "xxx.xx/xxxxxx/x....x/x....x"
+            ],
+            "assemblies": {
+                "A3a D1d E2e B4b C5d F6c": [
+                    "RIGHT 1 [D1d]",
+                    "UP 1 [E2e]",
+                    "RIGHT 1 [(2,0,2,X)1d F6c]",
+                    "DOWN 1 [A3a B4b C5d]",
+                    "BACKWARD 1 [(-2,-2,0,Y)5d (0,-2,-2,X)4b (0,-4,0,Z)3a]",
+                    "DOWN 5 [(-2,-2,-2,Y)5d (0,-2,-4,X)4b (0,-4,-2,Z)3a]",
+                    "LEFT 5 [(2,2,0,Z)6c]",
+                    "BACKWARD 4 [(2,2,0,Y)2e]",
+                    "FORWARD 3 [(4,0,2,X)1d]"
+                ]
+            }
+        },
+        {
+            "shapes": [
+                "xxxxxx/x.xxxx/xx..xx/x...xx",
+                "xxxxxx/xxx..x/xx..xx/xx...x",
+                "xxxxxx/xx..xx/x.x..x/x....x",
+                "xxxxxx/xx..xx/x..x.x/x....x",
+                "xxxxxx/xxxxxx/xxx..x/xxx..x",
+                "xxxxxx/xx.xxx/xx..xx/xx..xx"
+            ],
+            "assemblies": {
+                "A1b C2a B3f E4b F5c D6a": [
+                    "BACKWARD 6 [B3f E4b F5c]",
+                    "LEFT 3 [C2a]",
+                    "UP 4 [D6a]",
+                    "FORWARD 6 [A1b]"
+                ]
+            }
+        }
+    ]
+}
