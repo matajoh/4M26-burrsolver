@@ -63,7 +63,10 @@ def cross_mesh(scene: sp.Scene):
 
 
 def save_scenepic(path: str, puzzle: Puzzle,
-                  disassembly: List[Tuple[PuzzleState, Move]], width: int, height: int):
+                  disassembly: List[Tuple[PuzzleState, Move]],
+                  width: int, height: int,
+                  head_html="",
+                  body_html=""):
     """Save the solution as a ScenePic HTML file."""
     piece_size = width // 6
     scene = sp.Scene()
@@ -132,4 +135,5 @@ def save_scenepic(path: str, puzzle: Puzzle,
         scene.place("shape{}".format(i), "1", str(i + 1))
 
     scene.place("solution", "2", "1 / span 6")
-    scene.save_as_html(path)
+    scene.save_as_html(path, "Burr Puzzle Solutions",
+                       head_html, body_html)
